@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kiosco - Productos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Kiosco - Administrar productos</h1>
+  </header>
+
+  <main>
+    <section id="form-section">
+      <form id="productForm">
+        <input type="hidden" id="productId" value="" />
+        <div>
+          <label for="nombre">Nombre de producto</label>
+          <input id="nombre" required />
+        </div>
+        <div>
+          <label for="categoria">Categoría</label>
+          <input id="categoria" required />
+        </div>
+        <div class="form-actions">
+          <button id="submitBtn" type="submit">Agregar producto</button>
+          <button id="cancelEditBtn" type="button" style="display:none">Cancelar edición</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="search-section">
+      <input id="searchInput" placeholder="🔎 Buscar por nombre..." />
+    </section>
+
+    <section id="list-section">
+      <div id="productsList"></div>
+      <div id="pagination"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Proyecto personal — Fede</small>
+  </footer>
+
+  <!-- Cargar Firebase SDKs (modular) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
